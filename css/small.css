@@ -1,0 +1,103 @@
+/* colors
+primary - #506AAF
+secondary - #CAC049
+grey scale:
+#FFFFFF
+#E1E1E1
+#C8C8C8
+#969696
+#646464
+#323232
+#000000
+*/
+* {box-sizing: border-box;}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+    background-color: white;
+    padding: 1rem 10px;
+    width: 100%;
+    margin: 0;
+}
+
+header span {
+    color: #506AAF;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 10px;
+}
+
+/* nav stuff */
+
+nav {
+    background-color: #506AAF;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #CAC049;
+    font-weight: 700;
+}
+
+nav li.active a {
+    background-color: #CAC049;
+    color: #506AAF;
+}
+
+nav li a:hover {
+    color: #E1E1E1;
+}
+
+/* end nav stuff */
+
+/* main stuff */
+
+main {
+    padding: 10px 10px;
+}
+
+main h1 {
+    color: #506AAF;
+}
+
+/* footer stuff */
+footer {
+    background-color: #506AAF ;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: .8rem;
+    color: white;
+    letter-spacing: 2.5px;
+}
+
+.date {
+    background-color: #627e75;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    border-radius: 20px 20px 0 0;
+}
