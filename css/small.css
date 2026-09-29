@@ -52,19 +52,22 @@ nav a {
   padding: 0.5rem;
   text-decoration: none;
   font-size: 1rem;
-  color: #cac049;
+  color: white;
   font-weight: 700;
 }
 
 nav li.active a {
   background-color: #cac049;
-  color: #506aaf;
+  color: #334371;
 }
 
 nav li a:hover {
-  color: #e1e1e1;
+  color: #CAC049;
 }
 
+nav li.active a:hover {
+  color: white;
+}
 /* end nav stuff */
 
 /* main stuff */
@@ -82,7 +85,7 @@ main h2 {
 }
 
 main h3 {
-  color: #969696;
+  color: #646464;
 }
 
 .list {
