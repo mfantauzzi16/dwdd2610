@@ -1,65 +1,62 @@
-/* colors
-primary - #506AAF
-secondary - #CAC049
-grey scale:
-#FFFFFF
-#E1E1E1
-#C8C8C8
-#969696
-#646464
-#323232
-#000000
-*/
+@use "variables" as *;
+
+/* ------------------------------
+   Base styles
+--------------------------------*/
+
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $body-font;
   margin: 0;
   padding: 0;
 }
 
+/* ------------------------------
+   Header
+--------------------------------*/
+
 header {
-  background-color: white;
+  background-color: $white;
   padding: 1rem 10px;
   width: 100%;
   margin: 0;
 }
 
 header span {
-  color: #506aaf;
+  color: $primary;
   font-size: 2rem;
   font-weight: 700;
   padding: 10px;
 }
 
-/* nav stuff */
-/* Navigation */
+/* ------------------------------
+   Navigation
+--------------------------------*/
 
 nav {
-  background-color: #506aaf;
+  background-color: $primary;
 }
 
-/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Hamburger button */
 .hamburger {
   display: block;
-  color: white;
+  color: $white;
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
-/* Hide menu by default */
 nav ul {
   display: none;
   margin: 0;
@@ -67,7 +64,6 @@ nav ul {
   list-style-type: none;
 }
 
-/* Show menu when checkbox is checked */
 #menu-toggle:checked ~ ul {
   display: block;
 }
@@ -81,32 +77,33 @@ nav a {
   padding: 0.75rem 1rem;
   text-decoration: none;
   font-size: 1rem;
-  color: white;
+  color: $white;
   font-weight: 700;
 }
 
 nav li.active a {
-  background-color: #cac049;
+  background-color: $secondary;
   color: #334371;
 }
 
 nav li a:hover {
-  color: #cac049;
+  color: $secondary;
 }
 
 nav li.active a:hover {
-  color: white;
+  color: $white;
 }
-/* end nav stuff */
 
-/* main stuff */
+/* ------------------------------
+   Main
+--------------------------------*/
 
 main {
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 main h1 {
-  color: #506aaf;
+  color: $primary;
 }
 
 main h2 {
@@ -114,42 +111,47 @@ main h2 {
   margin-top: 2rem;
 }
 
+main h3 {
+  color: $dark-gray;
+}
+
 main p {
-  color: #323232;
+  color: $darker-gray;
   line-height: 1.6;
 }
 
-main h3 {
-  color: #646464;
-}
+/* Custom list */
 
 .list {
   list-style: none;
   padding-left: 1.5rem;
-  color:#506aaf;
+  color: $primary;
 }
 
 .list li {
   position: relative;
   margin-bottom: 0.5rem;
+
+  &::before {
+    content: "◆";
+    color: $secondary;
+    position: absolute;
+    left: -1.5rem;
+  }
 }
 
-.list li::before {
-  content: "◆";
-  color: #CAC049;
-  position: absolute;
-  left: -1.5rem;
-}
+/* ------------------------------
+   Footer
+--------------------------------*/
 
-/* footer stuff */
 footer {
-  background-color: #506aaf;
-  color: #ffffff;
+  background-color: $primary;
+  color: $white;
   margin-top: 3rem;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 2rem 1rem;
   display: grid;
@@ -163,7 +165,7 @@ footer {
 
 .address h2,
 .address h3 {
-  color: #ffffff;
+  color: $white;
 }
 
 footer address {
@@ -171,7 +173,7 @@ footer address {
 }
 
 footer a {
-  color: #ffffff;
+  color: $white;
 }
 
 .socials {
@@ -197,7 +199,7 @@ footer a {
 }
 
 .copyright {
-  background-color: #646464;
+  background-color: $dark-gray;
   text-align: center;
   padding: 0.5rem;
 }
@@ -206,13 +208,4 @@ footer a {
   margin: 0;
   font-size: 0.8rem;
   letter-spacing: 1px;
-}
-
-.date {
-  background-color: #627e75;
-  color: white;
-  padding: 10px;
-  font-size: 1rem;
-  margin: 0 0 5px 0;
-  border-radius: 20px 20px 0 0;
 }

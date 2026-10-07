@@ -1,4 +1,9 @@
+@use "variables" as *;
+
 @media only screen and (min-width: 48rem) {
+
+  /* Navigation */
+
   .hamburger {
     display: none;
   }
@@ -11,7 +16,21 @@
     border-top: none;
   }
 
+  nav a {
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* Footer */
+
   .footer-content {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Main */
+
+  main {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 2rem;
   }
 }
